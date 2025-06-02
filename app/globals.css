@@ -98,12 +98,17 @@ body {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 0.5rem));
   }
 }
 
 .animate-infinite-scroll {
-  animation: infinite-scroll 30s linear infinite;
+  animation: infinite-scroll 25s linear infinite;
   display: flex;
   width: max-content;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }

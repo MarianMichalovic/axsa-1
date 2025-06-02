@@ -310,17 +310,17 @@ export default function LandingPage() {
         <section className="w-full py-12 border-y bg-muted/30 overflow-hidden">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <p className="text-sm font-medium text-muted-foreground pb-12">Používame najmodernejšie technológie</p>
-              <div className="relative w-full">
-                <div className="flex animate-infinite-scroll pb-12">
+              <p className="text-sm font-medium text-muted-foreground pb-12">Používame najmodernejšie technológie</p>
+              <div className="relative w-full overflow-hidden">
+                <div className="flex animate-infinite-scroll">
                   {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((logo, index) => (
-                    <div key={index} className="flex-shrink-0 mx-12 sm:mx-20">
+                    <div key={index} className="flex-shrink-0 mx-6 sm:mx-12 md:mx-20">
                       <Image
                         src={logo.src}
                         alt={logo.alt}
                         width={120}
                         height={60}
-                        className="h-10 sm:h-16 w-auto opacity-30 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+                        className="h-8 sm:h-10 md:h-16 w-auto opacity-30 grayscale transition-all hover:opacity-100 hover:grayscale-0"
                       />
                     </div>
                   ))}

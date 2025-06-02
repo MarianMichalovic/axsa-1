@@ -81,6 +81,7 @@ export function CoursesSlider() {
   const [prevBtnDisabled, setPrevBtnDisabled] = React.useState(true)
   const [nextBtnDisabled, setNextBtnDisabled] = React.useState(true)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
+  const [isLoading, setIsLoading] = React.useState(true)
 
   const scrollPrev = React.useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi])
   const scrollNext = React.useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi])
@@ -107,6 +108,14 @@ export function CoursesSlider() {
       emblaApi.off("reInit", onReInit)
     } // Cleanup
   }, [emblaApi, onSelect])
+
+  // Handle initial loading
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -175,13 +184,15 @@ export function CoursesSlider() {
                   variants={itemVariants}
                 >
                   <Card className="h-full flex flex-col overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/10 dark:from-slate-900 dark:to-slate-800/50 backdrop-blur hover:shadow-lg transition-all duration-300">
-                    <div className="relative">
+                    <div className="relative aspect-video">
                       <Image
-                        src={course.imageSrc || "/placeholder.svg"}
+                        src={course.imageSrc}
                         alt={course.imageAlt}
-                        width={400}
-                        height={225} // 16:9 aspect ratio
-                        className="w-full h-56 object-cover"
+                        fill
+                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 31.33vw"
+                        className="object-cover"
+                        priority={index < 3}
+                        loading={index < 3 ? "eager" : "lazy"}
                       />
                       {course.status && (
                         <Badge variant="destructive" className="absolute top-3 right-3">
