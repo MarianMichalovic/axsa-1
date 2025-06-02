@@ -22,6 +22,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { CoursesSlider } from "@/components/courses-slider"
+import { LogosSlider } from "@/components/logos-slider"
 
 const COMPANY_NAME = "Innovatech IT"
 
@@ -307,28 +308,7 @@ export default function LandingPage() {
         </section>
 
         {/* Logos Section */}
-        <section className="w-full py-12 border-y bg-muted/30 overflow-hidden">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <p className="text-sm font-medium text-muted-foreground pb-12">Používame najmodernejšie technológie</p>
-              <div className="relative w-full overflow-hidden">
-                <div className="flex animate-infinite-scroll">
-                  {[...COMPANY_LOGOS, ...COMPANY_LOGOS].map((logo, index) => (
-                    <div key={index} className="flex-shrink-0 mx-6 sm:mx-12 md:mx-20">
-                      <Image
-                        src={logo.src}
-                        alt={logo.alt}
-                        width={120}
-                        height={60}
-                        className="h-8 sm:h-10 md:h-16 w-auto opacity-30 grayscale transition-all hover:opacity-100 hover:grayscale-0"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <LogosSlider />
 
         {/* Features Section */}
         <section id="features" className="w-full py-20 md:py-32">

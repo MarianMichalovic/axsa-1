@@ -32,6 +32,7 @@ export function CardSlider({ title, description, cards, linkText = "Dozvedieť s
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [isMounted, setIsMounted] = useState(false);
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
@@ -42,11 +43,63 @@ export function CardSlider({ title, description, cards, linkText = "Dozvedieť s
   }, [emblaApi]);
 
   useEffect(() => {
-    if (!emblaApi) return;
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi || !isMounted) return;
     onSelect();
     setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
-  }, [emblaApi, onSelect]);
+  }, [emblaApi, onSelect, isMounted]);
+
+  if (!isMounted) {
+    return (
+      <section className="w-full py-20 md:py-32 bg-background dark:bg-slate-900">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-12">
+            <div className="md:w-2/3 mb-6 md:mb-0">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground dark:text-white">
+                {title}
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground dark:text-slate-300 max-w-2xl">
+                {description}
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {cards.map((card, index) => (
+              <Card key={index} className="h-full flex flex-col overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/10 dark:from-slate-900 dark:to-slate-800/50 backdrop-blur">
+                <div className="relative">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    width={400}
+                    height={225}
+                    className="w-full h-56 object-cover"
+                    priority={index < 3}
+                  />
+                </div>
+                <CardContent className="flex-grow flex flex-col p-6">
+                  <h3 className="text-xl font-semibold text-foreground dark:text-white mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground dark:text-slate-300 mb-4 flex-grow">
+                    {card.description}
+                  </p>
+                  <Button asChild variant="link" className="p-0 self-start text-primary dark:text-sky-400">
+                    <Link href={card.link || linkHref}>
+                      {linkText} <ArrowRight className="ml-1 size-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="w-full py-20 md:py-32 bg-background dark:bg-slate-900">
@@ -103,6 +156,7 @@ export function CardSlider({ title, description, cards, linkText = "Dozvedieť s
                       width={400}
                       height={225}
                       className="w-full h-56 object-cover"
+                      priority={index < 3}
                     />
                   </div>
                   <CardContent className="flex-grow flex flex-col p-6">
