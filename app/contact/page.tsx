@@ -206,14 +206,14 @@ export default function ContactPage() {
                   <h3 className="text-xl font-semibold mb-3">Find Us On Map</h3>
                   <div className="aspect-video rounded-lg overflow-hidden border border-border/40">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.5!2d-96.8!3d33.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDAwJzAwLjAiTiA5NsKwNDgnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.5!2d17.8747!3d48.1514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713f5f5f5f5f5f5%3A0x4713f5f5f5f5f5f5!2sPoliklinika%20NSK%20%C5%A0a%C4%BEa%2C%20Nemocni%C4%8Dn%C3%A1%20833%2F1%2C%20927%2001%20%C5%A0a%C4%BEa!5e0!3m2!1ssk!2ssk!4v1710864000000"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Company Location"
+                      title="Poliklinika NSK Šaľa Location"
                     />
                   </div>
                 </div>

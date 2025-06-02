@@ -10,35 +10,35 @@ import Image from "next/image"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
-const COMPANY_NAME = "Innovatech IT"
+const COMPANY_NAME = "AXSA"
 
 const teamMembers = [
-  { name: "Alice Wonderland", role: "CEO & Founder", image: "/images/1.jpg" },
-  { name: "Bob The Builder", role: "Chief Technology Officer", image: "/images/2.jpg" },
-  { name: "Carol Danvers", role: "Head of Cybersecurity", image: "/images/3.jpg" },
-  { name: "David Copperfield", role: "Lead Solutions Architect", image: "/images/4.jpg" },
+  { name: "Alice Wonderland", role: "Generálna riaditeľka a zakladateľka", image: "/images/1.jpg" },
+  { name: "Bob The Builder", role: "Technický riaditeľ", image: "/images/2.jpg" },
+  { name: "Carol Danvers", role: "Vedúca kybernetickej bezpečnosti", image: "/images/3.jpg" },
+  { name: "David Copperfield", role: "Hlavný architekt riešení", image: "/images/4.jpg" },
 ]
 
 const values = [
   {
     icon: <Lightbulb className="size-6 text-primary" />,
-    title: "Innovation",
-    description: "We constantly seek new and better ways to solve challenges.",
+    title: "Inovácie",
+    description: "Neustále hľadáme nové a lepšie spôsoby riešenia výziev.",
   },
   {
     icon: <ShieldCheck className="size-6 text-primary" />,
-    title: "Integrity",
-    description: "We operate with transparency and honesty in all our dealings.",
+    title: "Integrita",
+    description: "Pracujeme transparentne a čestne vo všetkých našich činnostiach.",
   },
   {
     icon: <Users className="size-6 text-primary" />,
-    title: "Customer Focus",
-    description: "Our clients' success is our top priority.",
+    title: "Zameranie na klienta",
+    description: "Úspech našich klientov je našou najvyššou prioritou.",
   },
   {
     icon: <Award className="size-6 text-primary" />,
-    title: "Excellence",
-    description: "We strive for the highest quality in our work and services.",
+    title: "Excellencia",
+    description: "Usilujeme sa o najvyššiu kvalitu v našej práci a službách.",
   },
 ]
 
@@ -73,14 +73,14 @@ export default function AboutPage() {
               className="text-center max-w-3xl mx-auto"
             >
               <Badge className="mb-4 rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
-                Who We Are
+                Kto sme
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                About {COMPANY_NAME}
+                O {COMPANY_NAME}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Driving technological excellence and innovation to empower businesses for a digital future. Learn about
-                our journey, mission, and the values that guide us.
+                Poháňame technologickú excelenciu a inovácie pre posilnenie podnikov v digitálnej budúcnosti. Zistite viac o
+                našej ceste, misii a hodnotách, ktoré nás vedú.
               </p>
             </motion.div>
           </div>
@@ -98,19 +98,19 @@ export default function AboutPage() {
             >
               <div>
                 <Badge className="mb-4 rounded-full px-3 py-1 text-sm" variant="outline">
-                  Our Journey
+                  Naša cesta
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                  Pioneering IT Solutions Since 2010
+                  Priekopníci v IT riešeniach od roku 2010
                 </h2>
                 <p className="text-lg text-muted-foreground mb-4">
-                  Founded with a vision to simplify complex technology, {COMPANY_NAME} has grown into a leading IT
-                  service provider. Our journey is marked by a relentless commitment to innovation, customer
-                  satisfaction, and adapting to the ever-changing tech landscape.
+                  Založená s víziou zjednodušiť komplexné technológie, {COMPANY_NAME} sa vyvinula na popredného poskytovateľa IT
+                  služieb. Našu cestu charakterizuje neustála snaha o inovácie, spokojnosť zákazníkov a prispôsobenie sa
+                  neustále sa meniacemu technologickému prostrediu.
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  We believe in building long-term partnerships with our clients, understanding their unique needs, and
-                  delivering tailored solutions that drive growth and efficiency.
+                  Veríme v budovanie dlhodobých partnerstiev s našimi klientmi, pochopenie ich jedinečných potrieb a
+                  poskytovanie riešení na mieru, ktoré podporujú rast a efektivitu.
                 </p>
               </div>
               <div>
@@ -141,11 +141,11 @@ export default function AboutPage() {
                 <Card className="h-full p-8 border-border/40 bg-gradient-to-br from-background to-muted/20 backdrop-blur">
                   <div className="flex items-center gap-4 mb-4">
                     <Target className="size-10 text-primary" />
-                    <h3 className="text-2xl font-bold">Our Mission</h3>
+                    <h3 className="text-2xl font-bold">Naša misia</h3>
                   </div>
                   <p className="text-muted-foreground text-lg">
-                    To empower businesses with innovative and reliable IT solutions, enabling them to achieve their
-                    strategic objectives, enhance operational efficiency, and secure their digital assets.
+                    Posilniť podniky inovatívnymi a spoľahlivými IT riešeniami, ktoré im umožnia dosiahnuť ich
+                    strategické ciele, zvýšiť prevádzkovú efektivitu a zabezpečiť ich digitálne aktíva.
                   </p>
                 </Card>
               </motion.div>
@@ -158,11 +158,11 @@ export default function AboutPage() {
                 <Card className="h-full p-8 border-border/40 bg-gradient-to-br from-background to-muted/20 backdrop-blur">
                   <div className="flex items-center gap-4 mb-4">
                     <Eye className="size-10 text-primary" />
-                    <h3 className="text-2xl font-bold">Our Vision</h3>
+                    <h3 className="text-2xl font-bold">Naša vízia</h3>
                   </div>
                   <p className="text-muted-foreground text-lg">
-                    To be the leading IT partner recognized for transforming businesses through technology, fostering
-                    innovation, and delivering exceptional value and service.
+                    Byť popredným IT partnerom uznávaným za transformáciu podnikov prostredníctvom technológií, podporu
+                    inovácií a poskytovanie výnimočnej hodnoty a služieb.
                   </p>
                 </Card>
               </motion.div>
@@ -181,11 +181,11 @@ export default function AboutPage() {
               className="text-center mb-12"
             >
               <Badge className="mb-4 rounded-full px-3 py-1 text-sm" variant="outline">
-                Core Principles
+                Základné princípy
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our Guiding Values</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Naše hodnoty</h2>
               <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
-                These principles are the foundation of our company culture and how we serve our clients.
+                Tieto princípy sú základom našej firemnej kultúry a spôsobu, akým slúžime našim klientom.
               </p>
             </motion.div>
             <motion.div
@@ -219,12 +219,12 @@ export default function AboutPage() {
               className="text-center mb-12"
             >
               <Badge className="mb-4 rounded-full px-3 py-1 text-sm" variant="secondary">
-                Our Experts
+                Naši experti
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Meet Our Leadership</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Pozrite sa na naše vedenie</h2>
               <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
-                Our experienced leadership team is dedicated to driving innovation and delivering exceptional results
-                for our clients.
+                Náš skúsený tím vedenia je odhodlaný poháňať inovácie a poskytovať výnimočné výsledky
+                pre našich klientov.
               </p>
             </motion.div>
             <motion.div
@@ -266,14 +266,13 @@ export default function AboutPage() {
               className="max-w-3xl mx-auto text-center"
             >
               <Building className="size-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Partner with {COMPANY_NAME}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Partnerstvo s {COMPANY_NAME}</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Ready to take your business to the next level with cutting-edge IT solutions? Let's build the future
-                together.
+                Pripravený vziať svoj biznis na dalšiu úroveň?
               </p>
               <Button size="lg" asChild className="rounded-full">
                 <Link href="/contact">
-                  Contact Us Today <ArrowRight className="ml-2 size-4" />
+                  Kontaktujte Nás hneď <ArrowRight className="ml-2 size-4" />
                 </Link>
               </Button>
             </motion.div>

@@ -320,7 +320,7 @@ export default function LandingPage() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
             >
-              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
+              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-purple-500/20 via-blue-500/10 to-blue-400/5 dark:from-purple-500/30 dark:via-blue-500/20 dark:to-blue-400/10" variant="secondary">
                 Naše kľúčové služby
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Komplexné IT riešenia</h2>
@@ -373,7 +373,7 @@ export default function LandingPage() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center space-y-4 text-center mb-16"
             >
-              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
+              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-purple-500/20 via-blue-500/10 to-blue-400/5 dark:from-purple-500/30 dark:via-blue-500/20 dark:to-blue-400/10" variant="secondary">
                 Náš proces
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Efektívny prístup, hmatateľné výsledky</h2>
@@ -431,7 +431,7 @@ export default function LandingPage() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
             >
-              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
+              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-purple-500/20 via-blue-500/10 to-blue-400/5 dark:from-purple-500/30 dark:via-blue-500/20 dark:to-blue-400/10" variant="secondary">
                 Úspech klientov
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Čo hovoria naši klienti</h2>
@@ -515,7 +515,7 @@ export default function LandingPage() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
             >
-              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
+              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-purple-500/20 via-blue-500/10 to-blue-400/5 dark:from-purple-500/30 dark:via-blue-500/20 dark:to-blue-400/10" variant="secondary">
                 Servisné plány
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Flexibilné plány pre každú potrebu</h2>
@@ -627,7 +627,7 @@ export default function LandingPage() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center space-y-4 text-center mb-12"
             >
-              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
+              <Badge className="rounded-full px-4 py-1.5 text-sm font-medium bg-gradient-to-r from-purple-500/20 via-blue-500/10 to-blue-400/5 dark:from-purple-500/30 dark:via-blue-500/20 dark:to-blue-400/10" variant="secondary">
                 Časté otázky
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Často kladené otázky</h2>
