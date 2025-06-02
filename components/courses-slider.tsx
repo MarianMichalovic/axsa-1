@@ -134,11 +134,10 @@ export function CoursesSlider() {
         >
           <div className="md:w-2/3 mb-6 md:mb-0">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight bg-gradient-to-r from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
-              Naše posledné články
+              Naše posledné projekty
             </h2>
             <p className="mt-4 text-lg text-muted-foreground dark:text-slate-300 max-w-2xl">
-            Prinášame tipy, novinky a zákulisné pohľady z našej každodennej práce v IT. Sledujte, ako tvoríme digitálne riešenia, ktoré menia svet – od webov a aplikácií až po systémy na mieru.
-            Inšpirujte sa trendmi, ktoré dnes hýbu svetom technológií.
+            Každý projekt je pre nás výzvou aj príležitosťou vytvoriť niečo, čo má zmysel. Navrhujeme riešenia, ktoré zjednodušujú prácu, šetria čas a prinášajú reálnu hodnotu klientom.
             </p>
           </div>
           <div className="flex gap-3 self-start md:self-center">

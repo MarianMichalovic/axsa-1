@@ -21,7 +21,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { CoursesSlider } from "@/components/courses-slider"
+import { CoursesSlider } from "@/components/slider-com"
 import { LogosSlider } from "@/components/logos-slider"
 
 const COMPANY_NAME = "Innovatech IT"
