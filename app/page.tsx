@@ -24,7 +24,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { CoursesSlider } from "@/components/slider-com"
 import { LogosSlider } from "@/components/logos-slider"
 
-const COMPANY_NAME = "Innovatech IT"
+const COMPANY_NAME = "AXSA"
 
 type CompanyLogo = {
   id: number
