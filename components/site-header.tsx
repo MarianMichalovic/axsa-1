@@ -12,7 +12,7 @@ const COMPANY_NAME = "AXSA"
 const navLinks = [
   { href: "/services", label: "Služby" },
   { href: "/about", label: "O nás" },
-  { href: "/case-studies", label: "Prípadové štúdie" },
+  { href: "/helpdesk", label: "Helpdesk" },
   { href: "/contact", label: "Kontakt" },
 ]
 
