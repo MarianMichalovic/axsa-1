@@ -14,7 +14,7 @@ import { useState } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
-const COMPANY_NAME = "Innovatech IT"
+const COMPANY_NAME = "AXSA"
 
 type Inputs = {
   name: string
@@ -62,14 +62,13 @@ export default function ContactPage() {
               className="text-center max-w-3xl mx-auto"
             >
               <Badge className="mb-4 rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
-                Let's Connect
+                Spojme sa
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                Get in Touch with {COMPANY_NAME}
+                Kontaktujte {COMPANY_NAME}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Have a project in mind, a question about our services, or just want to say hello? We'd love to hear from
-                you.
+                Máte projekt na mysli, otázku k našim službám alebo sa chcete len pozdraviť? Radi si s vami porozprávame.
               </p>
             </motion.div>
           </div>
@@ -87,63 +86,63 @@ export default function ContactPage() {
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <Card className="p-6 md:p-8 border-border/40 bg-gradient-to-br from-background to-muted/10 backdrop-blur">
-                  <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+                  <h2 className="text-2xl font-bold mb-6">Pošlite nám správu</h2>
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div>
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input id="name" {...register("name", { required: "Name is required" })} placeholder="John Doe" />
+                      <Label htmlFor="name">Celé meno</Label>
+                      <Input id="name" {...register("name", { required: "Meno je povinné" })} placeholder="Ján Novák" />
                       {errors.name && <p className="text-sm text-red-500 mt-1">{errors.name.message}</p>}
                     </div>
                     <div>
-                      <Label htmlFor="email">Email Address</Label>
+                      <Label htmlFor="email">E-mailová adresa</Label>
                       <Input
                         id="email"
                         type="email"
                         {...register("email", {
-                          required: "Email is required",
-                          pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" },
+                          required: "E-mail je povinný",
+                          pattern: { value: /^\S+@\S+$/i, message: "Neplatná e-mailová adresa" },
                         })}
-                        placeholder="you@example.com"
+                        placeholder="vas@email.sk"
                       />
                       {errors.email && <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>}
                     </div>
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
-                        <Label htmlFor="company">Company (Optional)</Label>
-                        <Input id="company" {...register("company")} placeholder="Your Company Inc." />
+                        <Label htmlFor="company">Spoločnosť (voliteľné)</Label>
+                        <Input id="company" {...register("company")} placeholder="Vaša spoločnosť s.r.o." />
                       </div>
                       <div>
-                        <Label htmlFor="phone">Phone (Optional)</Label>
-                        <Input id="phone" type="tel" {...register("phone")} placeholder="(123) 456-7890" />
+                        <Label htmlFor="phone">Telefón (voliteľné)</Label>
+                        <Input id="phone" type="tel" {...register("phone")} placeholder="+421 903 123 456" />
                       </div>
                     </div>
                     <div>
-                      <Label htmlFor="message">Message</Label>
+                      <Label htmlFor="message">Správa</Label>
                       <Textarea
                         id="message"
-                        {...register("message", { required: "Message is required" })}
-                        placeholder="How can we help you today?"
+                        {...register("message", { required: "Správa je povinná" })}
+                        placeholder="Ako vám môžeme pomôcť?"
                         rows={5}
                       />
                       {errors.message && <p className="text-sm text-red-500 mt-1">{errors.message.message}</p>}
                     </div>
                     <Button type="submit" className="w-full rounded-full" disabled={isSubmitting}>
                       {isSubmitting ? (
-                        "Sending..."
+                        "Odesilám..."
                       ) : (
                         <>
-                          Send Message <Send className="ml-2 size-4" />
+                          Odoslať správu <Send className="ml-2 size-4" />
                         </>
                       )}
                     </Button>
                     {submitStatus === "success" && (
                       <p className="text-sm text-green-600 mt-2 text-center">
-                        Message sent successfully! We'll be in touch soon.
+                        Správa bola úspešne odoslaná! Čoskoro sa vám ozveme.
                       </p>
                     )}
                     {submitStatus === "error" && (
                       <p className="text-sm text-red-500 mt-2 text-center">
-                        Failed to send message. Please try again later.
+                        Nepodarilo sa odoslať správu. Skúste to prosím neskôr.
                       </p>
                     )}
                   </form>
@@ -159,33 +158,38 @@ export default function ContactPage() {
                 className="space-y-8"
               >
                 <div>
-                  <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
+                  <h2 className="text-2xl font-bold mb-4">Kontaktné informácie</h2>
                   <p className="text-muted-foreground mb-6">
-                    Reach out to us directly through phone, email, or visit our office. We're here to assist you.
+                    Kontaktujte nás priamo telefonicky, e-mailom alebo navštívte našu kanceláriu. Sme tu, aby sme vám pomohli.
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
                       <MapPin className="size-6 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold">Our Office</h3>
-                        <p className="text-muted-foreground">123 Tech Avenue, Innovation City, TX 75001</p>
+                        <h3 className="font-semibold">Naša kancelária</h3>
+                        <p className="text-muted-foreground">Hlavná 123, 92701 Šaľa</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <Mail className="size-6 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold">Email Us</h3>
-                        <Link href="mailto:info@innovatechit.com" className="text-primary hover:underline">
-                          info@innovatechit.com
-                        </Link>
+                        <h3 className="font-semibold">Napíšte nám</h3>
+                        <div className="space-y-1">
+                          <Link href="mailto:axsa@axsa.sk" className="block text-primary hover:underline">
+                            axsa@axsa.sk
+                          </Link>
+                          <Link href="mailto:helpdesk@axsa.sk" className="block text-primary hover:underline">
+                            helpdesk@axsa.sk
+                          </Link>
+                        </div>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <Phone className="size-6 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold">Call Us</h3>
-                        <Link href="tel:+1234567890" className="text-primary hover:underline">
-                          (123) 456-7890
+                        <h3 className="font-semibold">Zavolajte nám</h3>
+                        <Link href="tel:+421903879849" className="text-primary hover:underline">
+                          +421 903 879 849
                         </Link>
                       </div>
                     </div>
@@ -193,17 +197,17 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold mb-4 mt-10">Business Hours</h2>
+                  <h2 className="text-2xl font-bold mb-4 mt-10">Prevádzkové hodiny</h2>
                   <div className="space-y-2 text-muted-foreground">
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM (CST)</p>
-                    <p>Saturday - Sunday: Closed</p>
-                    <p>Support available 24/7 for managed service clients.</p>
+                    <p>Pondelok - Piatok: 8:00 - 17:00</p>
+                    <p>Sobota - Nedeľa: Zatvorené</p>
+                    <p>Podpora dostupná 24/7 pre klientov so správou IT služieb.</p>
                   </div>
                 </div>
 
                 {/* Placeholder for Map */}
                 <div className="mt-8">
-                  <h3 className="text-xl font-semibold mb-3">Find Us On Map</h3>
+                  <h3 className="text-xl font-semibold mb-3">Nájdite nás na mape</h3>
                   <div className="aspect-video rounded-lg overflow-hidden border border-border/40">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.5!2d17.8747!3d48.1514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713f5f5f5f5f5f5%3A0x4713f5f5f5f5f5f5!2sPoliklinika%20NSK%20%C5%A0a%C4%BEa%2C%20Nemocni%C4%8Dn%C3%A1%20833%2F1%2C%20927%2001%20%C5%A0a%C4%BEa!5e0!3m2!1ssk!2ssk!4v1710864000000"
@@ -213,7 +217,7 @@ export default function ContactPage() {
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Poliklinika NSK Šaľa Location"
+                      title="AXSA - Poloha kancelárie"
                     />
                   </div>
                 </div>

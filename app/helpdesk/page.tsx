@@ -40,12 +40,12 @@ const helpCategories = [
 const contactMethods = [
   {
     title: "Telefón",
-    subtitle: "+421 2 1234 5678",
+    subtitle: "+421 903 879 849",
     description: "Okamžitá pomoc pre kritické problémy",
     badge: "24/7",
     action: "Zavolať",
     icon: <Phone className="size-6 text-primary" />,
-    href: "tel:+421212345678",
+    href: "tel:+421903879849",
   },
   {
     title: "Email",
