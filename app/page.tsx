@@ -289,7 +289,7 @@ export default function LandingPage() {
                   <Link href="/contact">Požiadať o konzultáciu</Link>
                 </Button>
               </div>
-              <div className="flex items-center justify-center gap-4 mt-6 text-[10px] sm:text-sm text-muted-foreground">
+              <div className="flex items-center justify-center gap-4 mt-6 text-xs sm:text-sm text-muted-foreground">
                 <div className="flex flex-col sm:flex-row items-center gap-2">
                   <Check className="size-4 text-primary" />
                   <span>Odborné riešenia</span>
@@ -531,7 +531,6 @@ export default function LandingPage() {
                   {
                     name: "Základná podpora",
                     price: "Individuálne",
-                    pricePeriod: "Kontaktujte nás",
                     description: "Ideálne pre malé podniky, ktoré potrebujú spoľahlivú IT podporu.",
                     features: [
                       "Vzdialená a miestna podpora",
@@ -544,7 +543,6 @@ export default function LandingPage() {
                   {
                     name: "Proaktívna správa IT",
                     price: "Individuálne",
-                    pricePeriod: "Kontaktujte nás",
                     description: "Komplexná správa IT pre rastúce podniky.",
                     features: [
                       "Všetky základné funkcie",
@@ -559,7 +557,6 @@ export default function LandingPage() {
                   {
                     name: "Podnikové riešenia",
                     price: "Individuálne",
-                    pricePeriod: "Kontaktujte nás",
                     description: "Prispôsobené IT služby pre veľké organizácie.",
                     features: [
                       "Všetky proaktívne funkcie",
@@ -588,9 +585,8 @@ export default function LandingPage() {
                       )}
                       <CardContent className="p-6 flex flex-col h-full">
                         <h3 className="text-2xl font-bold">{plan.name}</h3>
-                        <div className="flex items-baseline mt-4">
+                        <div className="mt-4">
                           <span className="text-4xl font-bold">{plan.price}</span>
-                          {plan.pricePeriod && <span className="text-muted-foreground ml-1">{plan.pricePeriod}</span>}
                         </div>
                         <p className="text-muted-foreground mt-2">{plan.description}</p>
                         <ul className="space-y-3 my-6 flex-grow">
@@ -685,12 +681,20 @@ export default function LandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground relative overflow-hidden">
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-          <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        <section 
+          className="cta-section w-full py-20 md:py-32 text-primary-foreground relative overflow-hidden"
+          style={{
+            background: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%)',
+            color: 'hsl(var(--primary-foreground))'
+          }}
+        >
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+          {/* Decorative glows */}
+          <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl z-0"></div>
+          <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl z-0"></div>
 
-          <div className="container px-4 md:px-6 relative">
+          <div className="container px-4 md:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

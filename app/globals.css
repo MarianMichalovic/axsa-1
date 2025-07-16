@@ -112,3 +112,17 @@ body {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
+
+/* CTA Section Background Fix */
+.cta-section {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%) !important;
+  color: hsl(var(--primary-foreground)) !important;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
+  z-index: -1;
+}
