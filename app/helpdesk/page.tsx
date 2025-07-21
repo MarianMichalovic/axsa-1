@@ -56,24 +56,24 @@ const contactMethods = [
     icon: <Mail className="size-6 text-primary" />,
     href: "mailto:helpdesk@axsa.sk",
   },
-  {
-    title: "Live Chat",
-    subtitle: "Spustiť chat",
-    description: "Rýchla komunikácia s našimi odborníkmi",
-    badge: "Po-Pi 8:00-18:00",
-    action: "Chatovať",
-    icon: <MessageCircle className="size-6 text-primary" />,
-    href: "#chat",
-  },
-  {
-    title: "Klientsky portál",
-    subtitle: "portal.axsa.sk",
-    description: "Spravujte tickets a sledujte status",
-    badge: "Vždy dostupný",
-    action: "Prihlásiť sa",
-    icon: <User className="size-6 text-primary" />,
-    href: "https://portal.axsa.sk",
-  },
+  // {
+  //   title: "Live Chat",
+  //   subtitle: "Spustiť chat",
+  //   description: "Rýchla komunikácia s našimi odborníkmi",
+  //   badge: "Po-Pi 8:00-18:00",
+  //   action: "Chatovať",
+  //   icon: <MessageCircle className="size-6 text-primary" />,
+  //   href: "#chat",
+  // },
+  // {
+  //   title: "Klientsky portál",
+  //   subtitle: "portal.axsa.sk",
+  //   description: "Spravujte tickets a sledujte status",
+  //   badge: "Vždy dostupný",
+  //   action: "Prihlásiť sa",
+  //   icon: <User className="size-6 text-primary" />,
+  //   href: "https://portal.axsa.sk",
+  // },
 ]
 
 const services = [
@@ -174,7 +174,7 @@ export default function HelpdeskPage() {
                 IT Helpdesk
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Naša technická podpora je k dispozícii 24/7 pre riešenie vašich IT problémov. Garantujeme rýchle riešenie a profesionálny prístup.
+                Naša technická podpora je k dispozícii pre riešenie vašich IT problémov. Garantujeme rýchle riešenie a profesionálny prístup.
               </p>
               <div className="max-w-xl mx-auto">
                 <div className="relative">
@@ -207,7 +207,7 @@ export default function HelpdeskPage() {
                 show: { transition: { staggerChildren: 0.1 } },
                 hidden: {},
               }}
-              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+              className="grid md:grid-cols-2 lg:grid-cols-2 gap-6"
             >
               {contactMethods.map((method) => (
                 <motion.div
@@ -315,7 +315,7 @@ export default function HelpdeskPage() {
                     show: { opacity: 1, y: 0 },
                   }}
                 >
-                  <Card className={`h-full flex flex-col text-center items-center p-6 hover:shadow-lg transition-all duration-300 relative ${
+                  <Card className={`h-full flex flex-col text-center items-center justify-center p-6 hover:shadow-lg transition-all duration-300 relative ${
                     service.featured 
                       ? 'border-primary/50 bg-gradient-to-b from-primary/5 to-primary/10 shadow-lg scale-105' 
                       : ''
@@ -325,20 +325,22 @@ export default function HelpdeskPage() {
                         {service.badge}
                       </Badge>
                     )}
-                    <div className="mb-4">{service.icon}</div>
-                    <CardHeader className="p-0">
-                      <CardTitle className={`text-xl mb-2 ${service.featured ? 'text-primary' : ''}`}>
-                        {service.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-0 flex-grow">
-                      <p className="text-muted-foreground mb-3">{service.description}</p>
-                      <Badge variant={service.featured ? "default" : "outline"} className="text-sm">
-                        Odozva: {service.response}
-                      </Badge>
-                    </CardContent>
+                    <div className="flex flex-col items-center justify-center text-center">
+                      <div className="mb-4">{service.icon}</div>
+                      <CardHeader className="p-0">
+                        <CardTitle className={`text-xl mb-2 ${service.featured ? 'text-primary' : ''}`}>
+                          {service.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="p-0">
+                        <p className="text-muted-foreground">{service.description}</p>
+                        {/* <Badge variant={service.featured ? "default" : "outline"} className="text-sm">
+                          Odozva: {service.response}
+                        </Badge> */}
+                      </CardContent>
+                    </div>
                     {service.featured && (
-                      <Button className="mt-4" asChild>
+                      <Button className="mt-6" asChild>
                         <Link href="/contact">
                           Začať vzdialenú session <ArrowRight className="ml-2 size-4" />
                         </Link>
@@ -366,7 +368,7 @@ export default function HelpdeskPage() {
                   <div className={`w-4 h-4 rounded-full ${priority.color} mx-auto mb-4`}></div>
                   <CardHeader className="p-0">
                     <CardTitle className="text-lg mb-1">{priority.level}</CardTitle>
-                    <p className="text-sm font-medium text-primary">Odozva: {priority.response}</p>
+                    {/* <p className="text-sm font-medium text-primary">Odozva: {priority.response}</p> */}
                   </CardHeader>
                   <CardContent className="p-0">
                     <p className="text-sm text-muted-foreground mt-3">{priority.description}</p>
@@ -388,12 +390,8 @@ export default function HelpdeskPage() {
                   <span>8:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-muted/50 rounded-lg">
-                  <span className="font-medium">Sobota:</span>
-                  <span>9:00 - 15:00</span>
-                </div>
-                <div className="flex justify-between items-center p-4 bg-muted/50 rounded-lg">
-                  <span className="font-medium">Nedeľa:</span>
-                  <span>Len emergency</span>
+                  <span className="font-medium">Sobota - Nedeľa:</span>
+                  <span>Zatvorené</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-primary/10 rounded-lg border border-primary/20">
                   <span className="font-medium flex items-center gap-2">
@@ -408,7 +406,7 @@ export default function HelpdeskPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="w-full py-20 md:py-24 bg-muted/30">
+        {/* <section className="w-full py-20 md:py-24 bg-muted/30">
           <div className="container px-4 md:px-6">
             <div className="text-center max-w-xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Často kladené otázky</h2>
@@ -427,7 +425,7 @@ export default function HelpdeskPage() {
               </Accordion>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="w-full py-20 md:py-32">

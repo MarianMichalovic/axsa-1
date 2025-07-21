@@ -167,7 +167,7 @@ export default function ContactPage() {
                       <MapPin className="size-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h3 className="font-semibold">Naša kancelária</h3>
-                        <p className="text-muted-foreground">Hlavná 123, 92701 Šaľa</p>
+                        <p className="text-muted-foreground">Homolova 9 841 02 Bratislava</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -210,7 +210,7 @@ export default function ContactPage() {
                   <h3 className="text-xl font-semibold mb-3">Nájdite nás na mape</h3>
                   <div className="aspect-video rounded-lg overflow-hidden border border-border/40">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.5!2d17.8747!3d48.1514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713f5f5f5f5f5f5%3A0x4713f5f5f5f5f5f5!2sPoliklinika%20NSK%20%C5%A0a%C4%BEa%2C%20Nemocni%C4%8Dn%C3%A1%20833%2F1%2C%20927%2001%20%C5%A0a%C4%BEa!5e0!3m2!1ssk!2ssk!4v1710864000000"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.8472847139896!2d17.10633847612956!3d48.14493554723867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c8b5c5c5c5c5c%3A0x5c5c5c5c5c5c5c5c!2sHomolova%209%2C%20841%2002%20Bratislava%2C%20Slovakia!5e0!3m2!1sen!2ssk!4v1642684800000!5m2!1sen!2ssk"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}

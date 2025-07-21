@@ -101,7 +101,7 @@ export default function AboutPage() {
                   Naša cesta
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-                  Priekopníci v IT riešeniach od roku 2010
+                  Priekopníci v IT riešeniach od roku 2011
                 </h2>
                 <p className="text-lg text-muted-foreground mb-4">
                   Založená s víziou zjednodušiť komplexné technológie, {COMPANY_NAME} sa vyvinula na popredného poskytovateľa IT
@@ -209,7 +209,7 @@ export default function AboutPage() {
         </section>
 
         {/* Meet The Team Section (Simplified) */}
-        <section className="w-full py-20 md:py-32 bg-muted/30">
+        {/* <section className="w-full py-20 md:py-32 bg-muted/30">
           <div className="container px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -253,7 +253,7 @@ export default function AboutPage() {
               ))}
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* Join Us CTA */}
         <section className="w-full py-20 md:py-32">
