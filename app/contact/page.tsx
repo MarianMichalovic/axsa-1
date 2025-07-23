@@ -201,7 +201,7 @@ export default function ContactPage() {
                   <div className="space-y-2 text-muted-foreground">
                     <p>Pondelok - Piatok: 8:00 - 17:00</p>
                     <p>Sobota - Nedeľa: Zatvorené</p>
-                    <p>Podpora dostupná 24/7 pre klientov so správou IT služieb.</p>
+                    {/* <p>Podpora dostupná 24/7 pre klientov so správou IT služieb.</p> */}
                   </div>
                 </div>
 

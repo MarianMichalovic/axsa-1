@@ -225,9 +225,9 @@ export default function HelpdeskPage() {
                     </CardHeader>
                     <CardContent className="p-0 flex-grow">
                       <p className="text-sm text-muted-foreground mb-3">{method.description}</p>
-                      <Badge variant="secondary" className="text-xs mb-3">
+                      {/* <Badge variant="secondary" className="text-xs mb-3">
                         {method.badge}
-                      </Badge>
+                      </Badge> */}
                     </CardContent>
                     <Button variant="outline" asChild className="mt-auto">
                       <Link href={method.href}>
@@ -242,7 +242,7 @@ export default function HelpdeskPage() {
         </section>
 
         {/* Categories Section */}
-        <section className="w-full py-20 md:py-32">
+        {/* <section className="w-full py-20 md:py-32">
           <div className="container px-4 md:px-6">
             <div className="text-center max-w-xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Prehľadávať témy</h2>
@@ -286,7 +286,7 @@ export default function HelpdeskPage() {
               ))}
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* Services Section */}
         <section className="w-full py-20 md:py-32">
@@ -393,13 +393,13 @@ export default function HelpdeskPage() {
                   <span className="font-medium">Sobota - Nedeľa:</span>
                   <span>Zatvorené</span>
                 </div>
-                <div className="flex justify-between items-center p-4 bg-primary/10 rounded-lg border border-primary/20">
+                {/* <div className="flex justify-between items-center p-4 bg-primary/10 rounded-lg border border-primary/20">
                   <span className="font-medium flex items-center gap-2">
                     <Shield className="size-4 text-primary" />
                     Kritické problémy:
                   </span>
                   <span className="font-bold text-primary">24/7</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
