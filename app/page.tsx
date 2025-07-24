@@ -307,9 +307,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Logos Section */}
-        <LogosSlider />
-
         {/* Features Section */}
         <section id="features" className="w-full py-20 md:py-32">
           <div className="container px-4 md:px-6">
@@ -358,9 +355,6 @@ export default function LandingPage() {
             </motion.div>
           </div>
         </section>
-
-        {/* Courses Slider Section */}
-        <CoursesSlider />
 
         {/* How It Works Section */}
         <section className="w-full py-20 md:py-32 bg-muted/30 relative overflow-hidden">

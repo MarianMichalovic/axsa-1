@@ -7,7 +7,7 @@ const COMPANY_NAME = "AXSA, s.r.o."
 const navLinks = [
   { href: "/services", label: "Služby" },
   { href: "/about", label: "O nás" },
-  { href: "/case-studies", label: "Prípadové štúdie" },
+  // { href: "/case-studies", label: "Prípadové štúdie" },
   { href: "/contact", label: "Kontakt" },
 ]
 
@@ -44,11 +44,6 @@ export function SiteFooter() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href="/#faq" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Časté otázky
-                </Link>
-              </li>
             </ul>
           </div>
           <div className="space-y-4">
