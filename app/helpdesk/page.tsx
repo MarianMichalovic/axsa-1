@@ -341,8 +341,8 @@ export default function HelpdeskPage() {
                     </div>
                     {service.featured && (
                       <Button className="mt-6" asChild>
-                        <Link href="/contact">
-                          Začať vzdialenú session <ArrowRight className="ml-2 size-4" />
+                        <Link href="/helpdesk/remote-support">
+                          Stiahnuť klienta <ArrowRight className="ml-2 size-4" />
                         </Link>
                       </Button>
                     )}
