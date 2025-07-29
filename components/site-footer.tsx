@@ -67,18 +67,13 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/careers" className="text-muted-foreground hover:text-foreground transition-colors">
                   Kariéra
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Ochrana osobných údajov
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Obchodné podmienky
+                <Link href="/certifications" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Certifikácie
                 </Link>
               </li>
             </ul>

@@ -387,7 +387,7 @@ export default function HelpdeskPage() {
               <div className="grid gap-4 text-left">
                 <div className="flex justify-between items-center p-4 bg-muted/50 rounded-lg">
                   <span className="font-medium">Pondelok - Piatok:</span>
-                  <span>8:00 - 18:00</span>
+                  <span>8:30 - 17:00</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-muted/50 rounded-lg">
                   <span className="font-medium">Sobota - Nedeľa:</span>

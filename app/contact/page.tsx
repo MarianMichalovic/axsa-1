@@ -199,7 +199,7 @@ export default function ContactPage() {
                 <div>
                   <h2 className="text-2xl font-bold mb-4 mt-10">Prevádzkové hodiny</h2>
                   <div className="space-y-2 text-muted-foreground">
-                    <p>Pondelok - Piatok: 8:00 - 17:00</p>
+                    <p>Pondelok - Piatok: 8:30 - 17:00</p>
                     <p>Sobota - Nedeľa: Zatvorené</p>
                     {/* <p>Podpora dostupná 24/7 pre klientov so správou IT služieb.</p> */}
                   </div>
